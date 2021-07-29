@@ -1,0 +1,48 @@
+---
+layout: default
+team:
+ - name: Meet Greg
+   bio: Big Boss Man
+   description: Lorem ipsum dolor sit amet consectetur adipisicing elit. Assumenda eos cum totam expedita. Labore repudiandae tempore nihil dolores, deleniti minima ullam blanditiis enim cupiditate laborum quia vel facere dolore officia?
+   profile_image: /images/profile-1.jpg
+ - name: Meet Jane
+   bio: House Photographer
+   description: Lorem ipsum dolor sit amet consectetur adipisicing elit. Assumenda eos cum totam expedita. Labore repudiandae tempore nihil dolores, deleniti minima ullam blanditiis enim cupiditate laborum quia vel facere dolore officia?
+   profile_image: /images/profile-3.jpg
+ - name: Meet Johnny 
+   bio: Web Design
+   description: Lorem ipsum dolor sit amet consectetur adipisicing elit. Assumenda eos cum totam expedita. Labore repudiandae tempore nihil dolores, deleniti minima ullam blanditiis enim cupiditate laborum quia vel facere dolore officia?
+   profile_image: /images/profile-2.jpg
+---
+
+
+<!------ Header Banner ------->
+
+<section class="tall-60 grid bg-green">
+    <div class="col-5-middle editable padded">
+        <h2> Meet our growing family</h2>
+        <p> Lorem ipsum, dolor sit amet consectetur adipisicing elit. Veritatis labore aliquam veniam illum ratione id recusandae esse officiis iusto dolores eos quaerat cum, alias debitis placeat maiores enim totam eaque!</p>
+    </div>
+    <div class="col-7 bg-image bg-plant">
+    </div>
+</section>
+
+
+<!------ about the team ------->
+
+<section class="padded">
+    {% for person in page.team %}
+        <div class="grid">
+                <div class="col-5">
+                    <img src="{{ person.profile_image }}" class="profile-image">
+                </div>
+                <div class="col-7-middle padded"> 
+                    <h3> {{ person.name }} </h3>
+                    <p><strong> {{ person.bio }} </strong></p>
+                    <p> {{ person.description }} </p>
+                </div>
+        </div>
+    {% endfor %}
+</section>
+
+

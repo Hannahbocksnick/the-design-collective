@@ -65,6 +65,7 @@ body {
 .bg-green     { background-color: #9b9b81;}
 .bg-dark     { background-color: #a2745c;  }
 
+
 .light-text { color: white; } 
 
 
@@ -171,6 +172,11 @@ footer a:hover {
 }
 .bg-mockup {
     background-image: url('/images/mockup.jpg');
+}
+
+.profile-image {
+    border-radius: 100%;
+
 }
 
 /* SM - max-width in pixels approximately 768px */
