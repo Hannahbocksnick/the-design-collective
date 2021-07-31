@@ -1,9 +1,63 @@
 ---
 layout: default
+features:
+ - title: Beautiful Designs
+   description: lorem ipsum dolor sit amet consectetur adipisicing elit. Officiis quas nostrum illum aut voluptate provident natus ipsam! Cum doloribus ut, molestiae cumque neque quaerat dignissimos, impedit quibusdam necessitatibus nesciunt
+   featured_image: /images/placeholder-project.png
+ - title: Optimized Builds
+   description: lorem ipsum dolor sit amet consectetur adipisicing elit. Officiis quas nostrum illum aut voluptate provident natus ipsam! Cum doloribus ut, molestiae cumque neque quaerat dignissimos, impedit quibusdam necessitatibus nesciunt
+   featured_image: /images/placeholder-project.png
 ---
 
-<section>
-    
-    services
-
+<!------ Header Banner ------->
+<section class="bg-image bg-plant padded tall-70 grid-middle-left flex-flip">
+    <div class="col-9_sm-10 editable">
+        <h2> Our Services</h2>
+        <p> Lorem ipsum, dolor sit amet consectetur adipisicing elit. Veritatis labore aliquam veniam illum ratione id recusandae esse officiis iusto dolores eos quaerat cum, alias debitis placeat maiores enim totam eaque!</p>
+    </div>
 </section>
+
+<!------ Services section  ------->
+
+<section class="padded bg-green">
+    <div class="capped-width grid">
+    <div class="col-4_sm-12 padded-2">
+        <h3>Design.</h3>
+        <p class="light-text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Officiis quas nostrum illum aut voluptate provident natus ipsam! Cum doloribus ut, molestiae cumque neque quaerat dignissimos, impedit quibusdam necessitatibus nesciunt sunt.</p>
+        <p class="light-text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Officiis quas nostrum illum aut voluptate provident natus ipsam! Cum doloribus ut, molestiae cumque neque quaerat dignissimos, impedit quibusdam necessitatibus nesciunt sunt.</p>
+    </div>
+    <div class="col-4_sm-12 padded-2">
+        <h3>Build.</h3>
+        <p class="light-text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Officiis quas nostrum illum aut voluptate provident natus ipsam! Cum doloribus ut, molestiae cumque neque quaerat dignissimos, impedit quibusdam necessitatibus nesciunt sunt.</p>
+        <p class="light-text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Officiis quas nostrum illum aut voluptate provident natus ipsam! Cum doloribus ut, molestiae cumque neque quaerat dignissimos, impedit quibusdam necessitatibus nesciunt sunt.</p>
+    </div>
+    <div class="col-4_sm-12 padded-2">
+        <h3>Design & Build.</h3>
+        <p class="light-text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Officiis quas nostrum illum aut voluptate provident natus ipsam! Cum doloribus ut, molestiae cumque neque quaerat dignissimos, impedit quibusdam necessitatibus nesciunt sunt.</p>
+        <p class="light-text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Officiis quas nostrum illum aut voluptate provident natus ipsam! Cum doloribus ut, molestiae cumque neque quaerat dignissimos, impedit quibusdam necessitatibus nesciunt sunt.</p>
+    </div>
+    <div class="col-12 center padded-1">
+        <a href="/contact.html" class="button"> Get in Touch</a>
+    </div>
+    </div>
+</section>
+
+<!------ Signup Banner ------->
+
+{% include newsletter-signup.html %}
+
+<!--- Beautiful Designs Section-->
+
+<section>
+    {% for item in page.features %}
+    <div class="grid flex-flip-alternate">
+        <div class="col-5_sm-12-middle padded">
+            <h3>{{item.title}}</h3>
+            <p>{{item.description}}</p>
+        </div>
+        <div class="col-7_sm-12-middle padded">
+            <img src="{{item.featured_image}}" alt="{{item.title}}">   
+        </div>
+    </div>
+    {% endfor %}
+ </section>
